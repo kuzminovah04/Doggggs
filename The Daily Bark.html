@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Daily Bark: A Dog’s Life</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&display=swap">
+<style>
+:root{--bg:#e8e2d2;--ink:#1d1b17;--mut:#645d4f;--red:#8c1c1c;--ln:#1d1b17;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1c18;--ink:#e9e2cf;--mut:#a79f8b;--red:#e0796a;--ln:#e9e2cf}}
+:root[data-theme="dark"]{--bg:#1e1c18;--ink:#e9e2cf;--mut:#a79f8b;--red:#e0796a;--ln:#e9e2cf}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,"Times New Roman",serif}
+main{max-width:1020px;margin:0 auto;padding:14px}
+.mast{border-top:6px double var(--ln);border-bottom:3px double var(--ln);text-align:center;padding:6px 0 10px;margin-bottom:14px}
+.top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;border-bottom:1px solid var(--ln);padding-bottom:4px;margin-bottom:6px}
+h1{font:700 clamp(40px,9vw,76px)/1 "UnifrakturCook","Old English Text MT",Georgia,serif;margin:4px 0}
+.sub{font-style:italic;color:var(--mut)}
+.grid{display:grid;grid-template-columns:1fr 1.7fr 1fr}
+.col{padding:0 16px;border-left:1px solid var(--ln)}
+.col:first-child{border-left:0;padding-left:0}.col:last-child{padding-right:0}
+h2{font:900 24px/1.15 "Playfair Display",Georgia,serif;margin:0 0 8px}
+h3{font:700 18px "Playfair Display",Georgia,serif;margin:0 0 6px;padding-bottom:3px;border-bottom:2px solid var(--ln)}
+.mut{color:var(--mut);font-size:15px}
+.lead::first-letter{font:900 3.2em/.8 "Playfair Display",Georgia,serif;float:left;padding:4px 6px 0 0;color:var(--red)}
+.st{display:grid;grid-template-columns:auto 1fr auto;gap:5px 8px;align-items:center;font-size:15px;margin-bottom:14px}
+.bar{height:9px;border:1px solid var(--ln)}.bar i{display:block;height:100%;background:var(--ink);transition:width .4s}
+button{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--ln);padding:10px 12px;width:100%;text-align:left;margin-top:8px;cursor:pointer}
+button:hover,button:focus-visible{background:var(--ink);color:var(--bg);outline:none}
+button.p{font-weight:600;text-align:center;border-width:3px double;border-style:double}
+input{font:inherit;width:100%;padding:10px;border:1px solid var(--ln);background:transparent;color:var(--ink)}
+.res{border-left:4px solid var(--red);padding-left:12px;margin:12px 0;font-style:italic}
+.fact{margin:0 0 10px;padding-bottom:10px;border-bottom:1px dotted var(--mut);font-size:15px}
+.fact b{color:var(--red)}
+.fact.new{animation:f .9s}
+@keyframes f{from{background:var(--red);color:var(--bg)}}
+@media (prefers-reduced-motion:reduce){.fact.new{animation:none}}
+.prog{height:4px;background:var(--mut);opacity:.35;margin-top:8px}.prog i{display:block;height:100%;background:var(--red)}
+ul{padding-left:18px;margin:6px 0}
+.txt{text-align:justify;hyphens:auto}
+.hl{font-size:clamp(30px,4.6vw,44px);line-height:1.02;border-bottom:3px double var(--ln);padding-bottom:6px;margin:2px 0 10px}
+button.ch{border:0;border-top:1px dashed var(--ln);margin-top:0;padding:10px 2px}
+button.ch b{color:var(--red);margin-right:8px}
+button.ch:hover b,button.ch:focus-visible b{color:var(--bg)}
+button.tog{width:auto;margin:0;padding:0 8px;font-size:13px;font-variant:small-caps;border-style:solid;border-width:1px;letter-spacing:.04em}
+.fig{border:1px solid var(--ln);padding:4px;margin-bottom:14px}
+.ph{position:relative}.ph svg{display:block;width:100%;height:auto}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(var(--ink) .8px,transparent 1.1px) 0 0/4px 4px;opacity:.16;pointer-events:none}
+.cap{font-size:13px;font-style:italic;margin:4px 0 0;color:var(--mut)}
+li{margin-bottom:5px}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0}
+.mgrid button{margin:0;height:50px;padding:0;text-align:center;font-size:18px}
+.trk{position:relative;height:22px;border:1px solid var(--ln);margin:14px 0}
+.trk i{position:absolute;left:35%;width:30%;top:0;bottom:0;background:var(--ink);opacity:.22}
+.trk b{position:absolute;top:-5px;width:6px;height:30px;background:var(--red)}
+#sv{margin-bottom:6px}
+@media(max-width:760px){.grid{display:block}.col{border:0;padding:0;margin-bottom:18px}.c2{order:-1}.grid{display:flex;flex-direction:column}.c1{order:1}.c3{order:2}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+(function(){
+"use strict";
+var ROUNDS=24;
+var STATS={h:["Health"],j:["Joy"],b:["Bond"],w:["Wits"]};
+var ORIGINS=[
+["Street stray","Born in a cardboard box behind a bakery. Nobody planned you, and you learned everything the hard way.","h5 w10 b-5"],
+["Farm working line","Your parents herded sheep at dawn. Hard work is in your blood.","h8 w5 j-3"],
+["Champion pedigree","Twelve generations of show ribbons hang on the wall. No pressure.","w8 b6 h-6"],
+["Shelter pup","You spent your first weeks in a noisy shelter, waiting for someone to choose you.","b8 j-3 w2"],
+["Harbour dog","Your mother guarded a fishing boat. You grew up on salt air and seagull drama.","j6 h5"],
+["Mountain rescue line","Your family finds lost hikers in the snow. You were born with big paws and a bigger heart.","h8 b4 w4 j-4"],
+["Backyard mix-up","A fence, a surprise, and then you. Nobody knows who your father was.","j5 b5"]
+];
+ORIGINS.push(["Family home","Born in a warm kitchen, in a house full of people who had already chosen your name.","b8 j4"],["Circus troupe dog","Born in a wagon between two towns. Applause was your lullaby.","j10 w5 h-3"]);
+var WT=[14,12,8,14,8,6,10,22,3],MIN=[1800,1800,1860,1890,1800,1800,1800,1800,1850];
+var EMIN={"A loud machine":1920,"Time for the vet":1900,"A long road trip":1915,"Doorbell!":1880};
+var WORLD=[[1801,"The first census is taken in Britain."],[1804,"The first steam locomotive runs on rails."],[1815,"Waterloo ends the Napoleonic wars."],[1816,"A “year without a summer” chills the world."],[1825,"The first public steam railway opens in England."],[1830,"Passenger trains start running between Liverpool and Manchester."],[1837,"Queen Victoria begins her reign."],[1844,"The telegraph sends its first long-distance message."],[1851,"The Great Exhibition opens in London."],[1859,"Darwin publishes On the Origin of Species."],[1865,"The American Civil War ends."],[1869,"The Suez Canal opens."],[1876,"The telephone is patented."],[1879,"The light bulb becomes practical."],[1886,"The Statue of Liberty is unveiled."],[1895,"The first public film screenings are held in Paris."],[1903,"The Wright brothers fly for the first time."],[1908,"The Ford Model T goes on sale."],[1912,"The Titanic sinks on her first voyage."],[1914,"The First World War begins."],[1918,"The First World War ends."],[1922,"Insulin is first used to treat diabetes."],[1928,"Penicillin is discovered."],[1929,"The stock market crashes on Wall Street."],[1936,"The first regular TV broadcasts begin in London."],[1939,"The Second World War begins."],[1945,"The Second World War ends."],[1953,"The structure of DNA is described."],[1957,"Sputnik orbits the Earth."],[1961,"The first human travels into space."],[1969,"People walk on the Moon."],[1971,"Email is invented."],[1977,"Home computers go on sale."],[1981,"The first IBM PC arrives."],[1989,"The Berlin Wall falls."],[1991,"The World Wide Web goes public."],[1997,"Dolly the sheep is announced to the world."],[2001,"Wikipedia is founded."],[2004,"Facebook starts."],[2007,"The first iPhone arrives."],[2012,"A rover called Curiosity lands on Mars."],[2015,"The Paris climate agreement is signed."],[2020,"A global pandemic keeps everyone at home."],[2022,"AI chatbots become everyday tools."]];
+var JOBS={h:[["a sled dog on the long northern trails",1800],["a search-and-rescue hero",1950]],j:[["a star of the travelling circus",1800],["a film star",1920]],w:[["a shepherd who runs the whole farm",1800],["a police dog",1910],["a guide dog",1929]],b:[["the guardian of a whole village",1800],["a therapy dog in hospitals",1970]]};
+var LANDS=[["🇩🇪","Germany"],["🇯🇵","Japan"],["🇧🇷","Brazil"],["🇮🇹","Italy"],["🇨🇦","Canada"],["🇮🇳","India"],["🇦🇺","Australia"],["🇫🇷","France"],["🇲🇽","Mexico"],["🇵🇱","Poland"],["🇰🇪","Kenya"],["🇳🇴","Norway"],["🇹🇷","Türkiye"],["🇦🇷","Argentina"]];
+var FACTS=["A puppy is born deaf and blind. Hearing and sight arrive in about two weeks.","A dog’s nose print is unique, like a human fingerprint.","Dogs smell thousands of times better than we do.","Dogs can learn well over a hundred words and gestures.","A wagging tail leaning right usually means happy; leaning left, unsure.","Puppies sleep up to 18 hours a day while they grow.","Dogs sweat mostly through their paws and cool down by panting.","Dogs dream. Those twitching paws are often a chase in progress.","Your dog may read your face and remember your mood.","Dogs have three eyelids. The third one keeps the eye moist.","Dogs were probably the first animal humans domesticated, over 14,000 years ago.","A dog’s hearing reaches sounds far too high for human ears.","Dogs can notice tiny changes in your scent, such as stress.","Dogs turn in circles before lying down, an old habit from flattening grass.","A dog’s whiskers sense tiny air movements, helping in the dark.","Dogs have around 300 million smell receptors. Humans have about six million.","Many dogs tilt their heads to hear better or to see your face.","A dog’s wet nose helps catch scent particles from the air.","Dogs can be left-pawed or right-pawed, just like us.","Dogs can see blue and yellow, but not red and green well.","The oldest known dog lived for almost 30 years.","Older dogs often sleep more and love gentle, short walks.","Senior dogs keep learning tricks, they just do it at their own pace.","Dogs greet the people they love with the same brain chemicals humans release when bonding."];
+var EV=[
+["p","You find a basket of socks. Each one smells like your human.",[["Chew them all","j10 w-3 b-4","Joyful, damp, and slightly illegal.","Destroyed a whole sock collection"],["Carry one to your human","b10 j3","They laugh and call you the best helper ever.","Became a professional sock courier"],["Nap on them","h4 j4","Comfort level: maximum."]]],
+["p","A loud machine on wheels rolls out of the closet. It roars!",[["Bark at it until it leaves","w6 j3","It stops. You clearly won.","Defeated the Roaring Machine"],["Hide under the sofa","w-2 b2","Safe, but your pride is a bit dusty."],["Sniff it carefully","w8","Dust and old crumbs. Fascinating."]]],
+["p","Your very first walk! The world is HUGE and smells amazing.",[["Pull toward every smell","j8 b-3 w4","Your human is dragged along like a sled."],["Walk close by their side","b9 w3","The neighbours hear how well-behaved you are.","Mastered the loose leash"],["Roll in something mysterious","j6 h-4","You smell extraordinary. Bath time follows."]]],
+["y","A stranger on the sidewalk waves a treat and says hello.",[["Run up for the treat","j5 w-4","Tasty, but your human looks nervous."],["Check with your human first","b6 w6","Wise pup. They nod and let you have it."],["Sit and wiggle politely","j6 b3 w3","Charm offensive complete."]]],
+["y","There is a deep, glorious mud puddle after the rain.",[["Jump right in","j10 h-3 b-2","Splash! You are now a brown dog.","Became one with the mud"],["Stay clean","b3 h2","Clean, but did you really live?"]]],
+["y","A squirrel dashes across the yard and up a tree.",[["Chase it at full speed","j9 h-3","You did not catch it, but almost!","Lost a race to a squirrel"],["Guard the tree base","w5 j3","Patience. The squirrel will return."],["Ignore it with great dignity","b4 w3","The squirrel is confused by your calm."]]],
+["y","At the dog park, a bigger dog trots off with your favourite ball.",[["Challenge them","w-4 j2 h-5","Lots of growling, no ball, one scratch."],["Offer a play-bow","j8 w6","They just wanted a friend!","Made a best friend at the park"],["Fetch a stick instead","j5 w4","A stick is a ball with ambition."]]],
+["y","The kitchen trash can is open. It smells like a feast.",[["Dive in","j8 h-8 b-4","Delicious. Your tummy disagrees."],["Tip it gently, take the best bits","j4 h-3 w5","A refined thief."],["Fetch your human to show them","b9 w4","Honesty rewarded with a proper snack."]]],
+["y","A trainer offers a class: sit, stay, and come.",[["Try your best","w10 b6","You learn fast and love the treats.","Graduated obedience class"],["Clown around","j9 w2 b-2","Everyone loves you. The trainer sighs."],["Skip it and nap","h3 w-3","Napping is also a skill."]]],
+["y","Thunder rumbles outside. The windows rattle.",[["Hide in the bathtub","h2 w-1","A strange but effective bunker."],["Press against your human","b10","They stroke your ears until the storm passes.","Weathered a storm together"],["Bark at the sky","w3 j2 b-3","The sky does not answer."]]],
+["y","Somebody left the front door open just a crack.",[["Slip out for an adventure","j10 h-6 w3","You return muddy and very proud.","Escaped on a secret adventure"],["Alert your human","b8 w5","They close it and thank you."],["Sit in the doorway and watch","w4 j3","The world comes to you."]]],
+["a","Your human brings home a small, judgmental cat.",[["Be friendly","j6 b4 w3","Slowly, the cat accepts you. Sort of.","Befriended a very picky cat"],["Defend your territory","w-2 b-5 h-2","Hisses. Lots of hisses."],["Share your bed","b8 j4 h-2","You now have a roommate, and fur everywhere."]]],
+["a","Boxes everywhere. You are moving to a new home!",[["Help by carrying small things","b8 w3","Dedicated moving assistant."],["Explore every new corner","j8 w6","You find the best sunny spot on day one.","Found the best sunny spot in the new home"],["Worry near the door","b3 j-4","Odd, but your human reassures you."]]],
+["a","Your human sits on the floor, quiet and teary-eyed.",[["Rest your head on their knee","b12 j-1","They hug you for a long time.","Comforted my human on a hard day"],["Bring your favourite toy","b8 j4","A squeaky distraction. It works a bit."],["Wait and watch","w4 b3","Sometimes being there is enough."]]],
+["a","A family trip to the beach! Waves, sand, seagulls.",[["Race the waves","j12 h3","Joy is the sound of splashing.","Raced the ocean and won"],["Dig a huge hole","j8 w3 h-1","An excellent hole. A masterpiece."],["Bark at the seagulls","j5 w-2","They are unimpressed."]]],
+["a","A steak rests on the counter. Unattended. Glowing.",[["Steal it","j12 h-6 b-8","Your tummy and your human have opinions.","Stole a steak, regretted a little"],["Sit politely beside it","b10 w6 j2","Your human is moved and gives you a bite.","Resisted the steak (almost)"],["Look at it very hard","w3 j-1","It does not move."]]],
+["a","There is a gap in the fence. A friendly dog lives next door.",[["Squeeze through to say hi","j10 b-3 h-2","A secret friendship begins.","Made a secret fence friend"],["Say hi through the fence","j6 w4","Safe and sweet."],["Ignore it","b3","You are a responsible dog."]]],
+["a","Time for the vet. The car smells like worry.",[["Be brave","h7 b5 w3","The vet says you are a great patient.","Aced the vet check-up"],["Refuse to leave the car","b-2 h-2 j-2","Eventually, treats win."],["Lean on your human","b10 h3","Nothing scary with them nearby."]]],
+["a","Doorbell! A delivery person with a mysterious box.",[["Bark a warning","w4 j3 b-2","Box delivered, duty performed."],["Wag and greet","j7 b3","They pet you and call you a good dog."],["Hide behind the couch","w-1 b2","Not your finest hour."]]],
+["a","It is a rainy day, and nothing is happening.",[["Cuddle on the couch","b8 h2 j3","Rain on the window, warmth at your side."],["Zoom around the house","j9 w-2 h-2","The living room has never seen such speed."],["Watch the rain","w5 j1","Every drop is a story."]]],
+["a","Someone starts a belly rub. This could last forever.",[["Melt into the floor","j9 b6 h2","Pure bliss.","Reached enlightenment via belly rub"],["Ask for more with a paw","b7 j5 w3","Excellent negotiation skills."]]],
+["s","The stairs feel steeper than they used to be.",[["Take them slowly","h3 w5","Slow and steady wins the staircase."],["Ask to be carried","b9 h2","You love being lifted. They love lifting you.","Got carried up the stairs, again"],["Nap at the bottom","h4 j-1","A fine view from here."]]],
+["s","A bouncy neighbour puppy wants to play with you.",[["Teach them manners","w8 j4 b2","You become a legend of the street.","Mentored a neighbourhood puppy"],["Play gently","j9 h-1","Your tail wags like it is young again."],["Walk away to rest","h4 j-4","You deserve your quiet."]]],
+["s","A patch of sunlight lands on your favourite rug.",[["Stretch out and enjoy it","h5 j6","Warm, golden, perfect.","Perfected the art of sunbathing"],["Share it with your human","b12 j3","They sit down on the floor beside you."]]],
+["s","On a slow walk, you pass the park from your puppy days.",[["Sniff every corner","j8 w5","Memories drift in with every scent.","Revisited the old park, remembered everything"],["Lead the way home","b8 w3","They follow. You know best."],["Sit and watch the kids play","j6 b5","Life has been good."]]],
+["p","Your littermates tumble over you in a heap of fluff.",[["Wrestle back","j8 h2","Tiny growls, enormous joy."],["Curl up in the middle","b6 h3","Warm and safe."]]],
+["y","A cold snap freezes the water bowl.",[["Lick the ice","j4 w3","A frozen puzzle, solved slowly."],["Paw at it until it cracks","w6 h-1","Engineering!"],["Wait for your human","b6","They bring warm water and a blanket."]]],
+["y","A parade passes by, with drums and balloons.",[["Join in, tail high","j10 w-2","The crowd cheers for you.","Joined a parade uninvited"],["Watch from the window","w5 b3","Front-row seat."],["Hide from the noise","h2 b4","Your human holds you close."]]],
+["y","The wind carries a baker’s breakfast down the street.",[["Follow the smell","j8 w2 h-1","You find the bakery. They find you adorable.","Charmed a baker"],["Stay put and dream","b4 w2","The dream tastes good enough."]]],
+["y","Quiet day. Nothing happens, and it is wonderful.",[["Read on","h3 j2","Sometimes no news is the best news."]]],
+["a","A new baby arrives in the house. Everyone whispers.",[["Guard the crib","b10 w4","Nobody gets near without your approval.","Became a baby’s guardian"],["Sniff gently, then keep your distance","w5 b4","Respectful, and noticed."],["Feel left out and sulk","b-4 j-3","Someone hugs you. It helps."]]],
+["a","A snowfall covers the garden. Everything looks new.",[["Plow through it nose first","j10 h-2","Snow on your nose, glory in your heart."],["Leave pawprints in a pattern","w6 j4","Art, by dog."],["Stay by the stove","h4 b3","Wise."]]],
+["a","A long road trip. The window is slightly open.",[["Ears in the wind","j10 h-1","The best smell of your life, at full speed.","Rode with ears in the wind"],["Sleep on the back seat","h4 b3","You wake up somewhere new."],["Pace and whine","w-2 b-2","Everyone wants to arrive."]]],
+["a","Your human is learning an instrument. It is... loud.",[["Howl along","j8 b5","A duet is born.","Sang a duet with my human"],["Cover your ears","h2 w2","Support, from afar."],["Leave the room","b-3 j-1","Art takes patience."]]],
+["a","A lost kitten mews under the porch.",[["Fetch your human","b8 w6","The kitten gets a home.","Helped a lost kitten"],["Bark at it","w-2 j2","It cries louder. Oops."],["Curl up beside it","b6 j3","Kind, if a bit messy."]]],
+["a","Your human spells out the word “w-a-l-k”. You can spell too.",[["Pretend not to understand","w5 j3","Clever, and a little sneaky."],["Race to the door","j7 b2","Spelling is overrated."]]],
+["a","A long, lazy summer. Days blur into sunny naps.",[["Read on","h3 j4","Life is good, and it is summer."]]],
+["a","You get a brand-new collar with your name on it.",[["Wear it proudly","b6 j3","Everyone notices."]]],
+["a","A thief tries the back gate at night.",[["Bark with all your might","w6 b5 h-2","The thief runs. The house sleeps on, safe.","Scared off a thief"],["Wake your human gently","b8 w5","They are grateful you were so smart."],["Hide under the bed","w-3 h2","The gate squeaks and then it is quiet."]]],
+["s","Your human plays an old song, and you remember.",[["Lie close and listen","b10 j2","Some memories live in the room."],["Doze off","h3 j1","Dreams of tall grass."]]],
+["s","You find your old puppy toy in a drawer.",[["Carry it around again","j8 b5","It still squeaks!","Found my first toy, still squeaky"],["Sniff it and let it be","w4 b3","Old friends keep."]]],
+["s","Your muzzle is grey now. A child calls you “wise”.",[["Teach them to sit calmly","w8 b6","You are a teacher.","Taught a child to be gentle"],["Lick their hand","b8 j3","Wisdom is also kindness."]]],
+["s","A cold night. Your hips ache.",[["Ask for the warm blanket","h4 b6","Wrapped up like a parcel."],["Walk it off","h-3 w3","Stubborn, but stiff."]]],
+["s","The house is quiet today. Someone dear to your family is gone.",[["Rest your head on their lap","b12 j-3","You are there for them.","Stayed close during a sad time"],["Bring a toy and wait","b6","They smile through the tears."],["Lie near the empty chair","b4 w4","You remember them, in dog ways."]]],
+["a","Your human has moved the food up high, but a chair stands nearby.",[["Push the chair","j8 w4 h-3","Wobble, thump, victory. Probably.","Outsmarted the kitchen chair"],["Trust and wait","b8 w3","Dinner arrives right on time."]],"steak"],
+["a","Your old friend from the dog park shows up, a little greyer.",[["Play like old times","j9 b3","Two tails, one big wag.","Reunited with a park friend"],["Share a quiet walk","b7 w3","Some friendships don’t need noise."]],"friend"],
+["a","The picky cat has curled up on your back, uninvited.",[["Hold perfectly still","b8 w2","The cat purrs. You are furniture now.","Became a cat’s favourite furniture"],["Gently shake it off","j2 b-2","The cat leaves, offended."]],"cat"],
+["a","The kitten you helped is now a proud cat, with a gift: a mouse.",[["Accept it politely","b9 w3","A strange gift, a real friendship.","Got a mouse from a grateful cat"],["Pretend to be amazed","j6 b4","The cat looks very pleased."]],"kit"],
+["a","Your human smiles again and quietly thanks you for that hard day.",[["Wag slowly","b10","Some thanks need no words."],["Fetch a toy","j5 b6","They laugh. That is the best thank-you."]],"cry"],
+["e","Soldiers march past the house. The air smells of smoke and worry.",[["Stay close to your human","b10 w2","They hold you tightly.","Weathered a war at home"],["Bark at the drums","w3 b-2","The marching goes on regardless."]],0,[1914,1918]],
+["e","Sirens wail at night. Everyone hurries to the cellar.",[["Press against your human","b10","You keep each other calm.","Waited out the sirens together"],["Howl along with the siren","w2 j1 b-2","A very loud duet."]],0,[1939,1945]],
+["e","A steam train hoots in the distance. The whole town stops to look.",[["Run to the station","j9 w3","Smoke, steam, and a thousand new smells."],["Watch from the gate","w5 b2","Progress is loud."]],0,[1830,1910]],
+["e","Horse-drawn carts clatter by. One drops a rather interesting apple.",[["Investigate the apple","j6 h-3","Not a dog snack, it turns out."],["Walk beside the horse","w6 j3","A tall new friend."]],0,[1800,1925]],
+["e","A glowing box in the living room shows tiny moving animals.",[["Bark at the screen","j7 w-1","They don’t answer. Rude."],["Sit and watch together","b8 w3","A new family tradition begins.","Watched TV with the family"]],0,[1950,1995]],
+["e","Everyone gathers around the TV to watch someone walk on the Moon.",[["Curl up in the middle","b10 j2","History happens, and you have a front-row seat.","Watched the Moon landing, curled up"],["Sniff the TV from behind","w5","Nobody is back there."]],0,[1969,1970]],
+["e","Your human stares at a glowing rectangle all evening.",[["Nudge their hand","b8 w3","They look up and smile.","Pulled my human away from the screen"],["Fetch your leash","j6 w4","Message received: walk time."]],0,[1998,2022]],
+["e","The whole world stays home. Your human is here ALL day.",[["Enjoy every minute","j10 b8","Best year of your life.","Loved the year everyone stayed home"],["Insist on extra walks","h4 j6","A walk every hour on the hour."]],0,[2020,2022]]
+];
+var NAMES={h:"Sturdy",j:"Playful",b:"Devoted",w:"Clever"};
+var S=null,setup={name:"Buddy"},app=document.getElementById("app");
+function P(s){var o={};s.replace(/([hjbw])(-?\d+)/g,function(_,k,v){o[k]=+v});return o}
+function cl(n){return Math.max(0,Math.min(100,n))}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function stage(r){return r<=2?"p":r<=6?"y":r<=16?"a":"s"}
+function sName(r){return{p:"Puppyhood",y:"Young dog",a:"Prime of life",s:"Golden years"}[stage(r)]}
+function age(r){return (r/2).toFixed(1).replace(".0","")}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function temper(){
+ if(S.round<4)return "Still a mystery. Your choices will shape it.";
+ var k=Object.keys(S.gain).sort(function(a,b){return S.gain[b]-S.gain[a]});
+ return NAMES[k[0]]+" and "+NAMES[k[1]].toLowerCase();
+}
+function bars(){var h="<div class='st'>";for(var k in STATS)h+="<span>"+STATS[k][0]+"</span><div class='bar'><i style='width:"+S.st[k]+"%'></i></div><span>"+S.st[k]+"</span>";return h+"</div>"}
+function mast(sub){return "<header class='mast'><div class='top'><span>"+S.land[0]+" "+S.land[1]+"</span><span>Edition "+Math.min(S.round,ROUNDS)+" of "+ROUNDS+"</span><span>"+yr()+", age "+age(Math.min(S.round,ROUNDS))+"</span>"+MU()+"</div><h1>The Daily Bark</h1><div class='sub'>"+sub+"</div><div class='prog'><i style='width:"+Math.round(Math.min(S.round,ROUNDS)/ROUNDS*100)+"%'></i></div></header>"}
+function factsHtml(){var h="";for(var i=S.facts.length-1;i>=0;i--)h+="<p class='fact"+(i===S.facts.length-1&&!S.over?" new":"")+"'><b>Age "+age(i+1)+".</b> "+S.facts[i]+"</p>";return h}
+var CONS={"Stole a steak, regretted a little":"steak","Made a best friend at the park":"friend","Befriended a very picky cat":"cat","Helped a lost kitten":"kit","Comforted my human on a hard day":"cry"};
+var HHEV={"Your human brings home a small":"A cat moved in","A new baby arrives":"A baby joined the family","Boxes everywhere":"The family moved house","Your human is learning":"A musician in the house"};
+var SEAS={"A snowfall":"c","A cold snap":"c","A cold night":"c","A family trip to the beach":"w","A long, lazy summer":"w"};
+var HUM=["Mia","Tom","Aisha","Luca","Yuki","Omar","Anna","Pavel"],WW=["Sunny","Warm breeze","Thunderstorms","Hot and dry","Light rain"],WC=["Frosty","Snow flurries","Grey drizzle","Crisp and clear","Cold wind"],MGR={2:"c",5:"s",12:"t",20:"o"},ENDN=["The Iron Pup","The Joy Machine","The Loyal Heart","The Wise Old Dog"];
+var MG={c:{t:"A ball bounces across the garden. Catch as many as you can!",r:["You caught nearly every bounce.","A few caught, a few lost in the bushes.","The ball won today. Tomorrow, maybe."],m:"Caught every ball in the garden"},s:{t:"Somebody hid a treat in the garden. Follow your nose!",r:["Found it at once. Nose of a champion.","You got there in the end.","The treat stays hidden. Your human gives you one anyway."],m:"Sniffed out a hidden treat"},t:{t:"Fetch! Bring the stick back with perfect timing.",r:["Perfect fetch every time.","Some good throws, some wild ones.","The stick is now in the neighbour’s hedge."],m:"Mastered the art of fetch"},o:{t:"Where did you put your old toy? Two sniffs, take your time.",r:["There it is, right where you left it.","It took a while, but you remember now.","Never mind. Tomorrow it will turn up."],m:"Found my old toy again"}};
+var K="dailybark1",C={o:[],c:[],e:[],n:0},T=null;
+try{var jj=localStorage.getItem(K);if(jj)C=JSON.parse(jj)}catch(x){}
+function save(){try{localStorage.setItem(K,JSON.stringify(C))}catch(x){}}
+function rec(a,v){if(a.indexOf(v)<0)a.push(v)}
+function seas(){return S.round%2?"w":"c"}
+function hh(){for(var q in HHEV)if(S.ev[1].indexOf(q)===0&&S.hh.indexOf(HHEV[q])<0)S.hh.push(HHEV[q])}
+function COLH(){return "<p class='mut'>Lives printed: "+C.n+"</p><p class='mut' style='margin:0'>Origins found</p><ul>"+ORIGINS.map(function(o){return "<li>"+(C.o.indexOf(o[0])>=0?"✓ "+esc(o[0]):"– ???")+"</li>"}).join("")+"</ul><p class='mut'>Countries: "+C.c.length+" of "+LANDS.length+"<br>Endings: "+C.e.length+" of 4</p>"}
+function sfx(t){if(!M.c||!M.on||M.c.state!=="running")return;var c=M.c,n=c.currentTime,g=c.createGain(),i;g.connect(c.destination);if(t==="b"){var o=c.createOscillator();o.type="sawtooth";o.frequency.setValueAtTime(380,n);o.frequency.exponentialRampToValueAtTime(170,n+.14);g.gain.setValueAtTime(.05,n);g.gain.exponentialRampToValueAtTime(.001,n+.16);o.connect(g);o.start(n);o.stop(n+.18)}else{var b=c.createBuffer(1,c.sampleRate*.25,c.sampleRate),d=b.getChannelData(0),s=c.createBufferSource(),f=c.createBiquadFilter();for(i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);f.type="highpass";f.frequency.value=2500;s.buffer=b;g.gain.value=.05;s.connect(f);f.connect(g);s.start(n)}}
+function endMG(sc,mx){clearInterval(T);var k=S.mg,q=sc/mx,i=q>=.66?0:q>=.33?1:2,e=P(["j8 w4 b3","j5 w2","j2"][i]),x;for(x in e){S.st[x]=cl(S.st[x]+e[x]);if(e[x]>0)S.gain[x]+=e[x]}S.res=MG[k].r[i];if(i===0&&MG[k].m)S.mem.push(MG[k].m);S.mg=null;render()}
+function startMG(){var k=S.mg,b=document.getElementById("mg"),i,h,cs;if(!b)return;
+ if(k==="c"){var n=0,hit=0,cur=-1;h="<p class='mut'>Tap the ball when it pops up. Eight balls.</p><div class='mgrid'>";for(i=0;i<12;i++)h+="<button data-g='"+i+"'></button>";b.innerHTML=h+"</div>";cs=b.querySelectorAll("[data-g]");cs.forEach(function(c,j){c.onclick=function(){if(j===cur&&c.textContent==="●"){hit++;c.textContent="✓"}}});T=setInterval(function(){if(cur>=0&&cs[cur].textContent==="●")cs[cur].textContent="";if(n>=8)return endMG(hit,8);cur=Math.floor(Math.random()*12);cs[cur].textContent="●";n++},900)}
+ else if(k==="t"){var th=0,pts=0,p=0,dir=1,mk;b.innerHTML="<div class='trk'><i></i><b id='mk'></b></div><p class='mut' id='mgi'>Throw 1 of 3. Stop the marker in the shaded middle.</p><button class='p' id='stp'>Throw</button>";mk=document.getElementById("mk");T=setInterval(function(){p+=dir*2.2;if(p>=100||p<=0)dir=-dir;mk.style.left=p+"%"},16);document.getElementById("stp").onclick=function(){var d=Math.abs(p-50);pts+=d<8?3:d<20?2:d<35?1:0;th++;if(th>=3)endMG(pts,9);else document.getElementById("mgi").textContent="Throw "+(th+1)+" of 3. Stop the marker in the shaded middle."}}
+ else{var tr=k==="s"?3:2,left=tr,t=Math.floor(Math.random()*9);h="<p class='mut' id='mgi'>Hidden somewhere: "+(k==="s"?"a treat":"your old toy")+". "+tr+" sniffs.</p><div class='mgrid' style='grid-template-columns:repeat(3,1fr)'>";for(i=0;i<9;i++)h+="<button data-g='"+i+"'></button>";b.innerHTML=h+"</div>";cs=b.querySelectorAll("[data-g]");cs.forEach(function(c,j){c.onclick=function(){if(!left)return;if(j===t){var s=left;left=0;c.textContent="★";setTimeout(function(){endMG(s,tr)},700);return}left--;c.textContent=(Math.abs((j/3|0)-(t/3|0))+Math.abs(j%3-t%3))<2?"warm":"cold";if(!left)setTimeout(function(){endMG(0,tr)},900)}})}}
+function wrap(t,n){var w=t.split(" "),l=[],c="";w.forEach(function(x){if((c+" "+x).length>n&&c){l.push(c);c=x}else c=c?c+" "+x:x});if(c)l.push(c);return l}
+function tx(l,x,y,sz,lh,wt){return l.map(function(s,i){return "<text x='"+x+"' y='"+(y+i*lh)+"' font-size='"+sz+"' font-weight='"+(wt||400)+"'>"+esc(s)+"</text>"}).join("")}
+function saveFront(){
+ var en=ending(),f=S.fin||{jb:["a good dog","a good dog"],ev:[]},y1=S.y0+Math.round(S.round/2),y=600,p=[],
+ dg=fig().match(/<svg[\s\S]*?<\/svg>/)[0].replace(/var\(--ink\)/g,"#1d1b17").replace(/var\(--bg\)/g,"#efe8d6").replace(/var\(--mut\)/g,"#645d4f").replace("<svg ","<svg xmlns='http://www.w3.org/2000/svg' x='40' y='310' width='380' height='232' ");
+ function ad(l,sz,lh,wt){p.push(tx(l,40,y,sz,lh,wt));y+=l.length*lh+6}
+ ad(["Life memories"],26,32,700);
+ (S.mem.length?S.mem.slice(0,5):["A quiet life, and that is okay."]).forEach(function(m){ad(wrap("• "+m,66),19,25)});
+ y+=10;ad(["What you might have been"],26,32,700);ad(wrap(S.name+" could have become "+f.jb[0]+", or "+f.jb[1]+".",66),19,25);
+ y+=10;ad(["The world in your time"],26,32,700);
+ (f.ev.length?f.ev.slice(0,3).map(function(e){return e[0]+". "+e[1]}):["The world kept turning, one quiet neighbourhood at a time."]).forEach(function(m){ad(wrap(m,66),19,25)});
+ var sv="<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1120' viewBox='0 0 800 1120' font-family='Georgia,serif' fill='#1d1b17'><rect width='800' height='1120' fill='#efe8d6'/><rect x='20' y='20' width='760' height='1080' fill='none' stroke='#1d1b17' stroke-width='3'/><rect x='28' y='28' width='744' height='1064' fill='none' stroke='#1d1b17'/><text x='400' y='110' font-size='70' font-weight='700' text-anchor='middle'>The Daily Bark</text><text x='400' y='148' font-size='20' font-style='italic' text-anchor='middle' fill='#645d4f'>Final edition: "+esc(S.land[1])+", "+S.y0+" to "+y1+"</text><line x1='40' y1='170' x2='760' y2='170' stroke='#1d1b17' stroke-width='3'/>"+tx(wrap(S.name+": "+en.t,30),40,225,38,44,700)+dg+tx(wrap(S.origin[0]+", born in "+S.land[1]+". Lived "+age(S.round)+" years.",30),450,350,20,26)+tx(wrap(en.l,30),450,440,19,25)+p.join("")+"</svg>",
+ im=new Image(),cv=document.createElement("canvas"),btn=document.getElementById("sv");
+ cv.width=1600;cv.height=2240;
+ im.onload=function(){cv.getContext("2d").drawImage(im,0,0,1600,2240);cv.toBlob(function(b){var u=window.claude&&claude.use?claude.use("downloads"):Promise.resolve(null);u.then(function(dl){if(!dl){btn.textContent="Saving is not available here. Try a screenshot.";return}return dl.save({filename:"daily-bark-front-page.png",data:b})}).catch(function(){})},"image/png")};
+ im.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(sv);
+}
+function yr(){return S.y0+Math.floor((Math.min(S.round,ROUNDS)-1)/2)}
+function ok(i){var k,v=EV[i];for(k in EMIN)if(v[1].indexOf(k)===0&&yr()<EMIN[k])return false;for(k in SEAS)if(v[1].indexOf(k)===0&&SEAS[k]!==seas())return false;if(v[3]&&!S.fl[v[3]])return false;if(v[4]&&(yr()<v[4][0]||yr()>v[4][1]))return false;return true}
+var M={on:true,c:null,m:null};
+function tone(f,t,d,v){var o=M.c.createOscillator(),g=M.c.createGain();o.type="triangle";o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(M.m);o.start(t);o.stop(t+d+.05)}
+function loop(){if(!M.c)return;if(M.on&&M.c.state==="running"){var sc=[262,294,330,392,440,523,392,330],f=sc[Math.floor(Math.random()*sc.length)];tone(f,M.c.currentTime,2.2,.5);if(Math.random()<.3)tone(f/2,M.c.currentTime,3,.35)}setTimeout(loop,900+Math.random()*1400)}
+function musicStart(){if(M.c||!M.on)return;try{M.c=new (window.AudioContext||window.webkitAudioContext)();M.m=M.c.createGain();M.m.gain.value=.06;M.m.connect(M.c.destination);loop()}catch(e){M.c=null}}
+function MU(){return "<button class='tog' id='mu' aria-pressed='"+M.on+"'>♪ Music: "+(M.on?"on":"off")+"</button>"}
+function fig(){var g=stage(S.round),c={p:[30,19,22,12],y:[40,23,21,22],a:[50,26,23,28],s:[50,24,23,26]}[g],bw=c[0],bh=c[1],hr=c[2],lg=c[3],bx=116,by=124-lg-bh,hx=bx-bw+2,hy=by-bh-hr*.2,tl=g==="p"?16:34,
+ s="<svg viewBox='0 0 230 140' role='img' aria-label='Portrait of "+esc(S.name)+"'><line x1='10' y1='124' x2='220' y2='124' stroke='var(--mut)'/>"+
+ [bx-bw+8,bx-bw+22,bx+bw-28,bx+bw-14].map(function(x){return "<rect x='"+x+"' y='"+(124-lg)+"' width='9' height='"+lg+"' rx='3' fill='var(--ink)'/>"}).join("")+
+ "<path d='M"+(bx+bw-4)+" "+(by-4)+" Q"+(bx+bw+20)+" "+(by-tl*.6)+" "+(bx+bw+12)+" "+(by-tl-8)+"' stroke='var(--ink)' stroke-width='7' fill='none' stroke-linecap='round'/>"+
+ "<ellipse cx='"+bx+"' cy='"+by+"' rx='"+bw+"' ry='"+bh+"' fill='var(--ink)'/><circle cx='"+hx+"' cy='"+hy+"' r='"+hr+"' fill='var(--ink)'/>"+
+ "<ellipse cx='"+(hx-hr*.95)+"' cy='"+(hy+hr*.35)+"' rx='"+hr*.6+"' ry='"+hr*.42+"' fill='"+(g==="s"?"var(--mut)":"var(--ink)")+"'/>"+
+ "<ellipse cx='"+(hx+hr*.55)+"' cy='"+(hy-hr*.35)+"' rx='7' ry='"+(g==="p"?15:12)+"' transform='rotate(25 "+(hx+hr*.55)+" "+(hy-hr*.35)+")' fill='var(--ink)' stroke='var(--bg)' stroke-width='1.5'/>"+
+ "<circle cx='"+(hx-hr*.25)+"' cy='"+(hy-hr*.15)+"' r='3' fill='var(--bg)'/><circle cx='"+(hx-hr*1.5)+"' cy='"+(hy+hr*.25)+"' r='3.5' fill='var(--bg)'/></svg>";
+ return "<div class='fig'><div class='ph'>"+s+"</div><p class='cap'>"+esc(S.name)+", "+age(S.round)+" years old</p></div>"}
+function afterlife(){
+ var k=Object.keys(S.gain).sort(function(a,b){return S.gain[b]-S.gain[a]}),y1=S.y0+Math.round(S.round/2),
+ jb=k.slice(0,2).map(function(x){return pick(JOBS[x].filter(function(j){return j[1]<=S.y0}))[0]}),
+ ev=WORLD.filter(function(e){return e[0]>=S.y0&&e[0]<=y1});
+ if(ev.length>4){var st=ev.length/4;ev=[0,1,2,3].map(function(i){return ev[Math.floor(i*st)]})}
+ S.fin={jb:jb,ev:ev};return "<h3>What you might have been</h3><p class='txt'>With a different roll of the dice, "+esc(S.name)+" could have become "+jb[0]+", or "+jb[1]+".</p><h3>The world in your time</h3>"+(ev.length?"<ul>"+ev.map(function(e){return "<li><b>"+e[0]+".</b> "+e[1]+"</li>"}).join("")+"</ul>":"<p class='mut'>The world kept turning, one quiet neighbourhood at a time.</p>")}
+function start(){
+ var y0=1800+Math.floor(Math.random()*221),el=[],i,r,o,st={h:60,j:60,b:60,w:60},e,k;
+ for(i=0;i<ORIGINS.length;i++)if(MIN[i]<=y0)el.push(i);
+ r=Math.random()*el.reduce(function(a,b){return a+WT[b]},0);
+ for(i=0;i<el.length;i++){r-=WT[el[i]];if(r<0)break}
+ o=ORIGINS[el[Math.min(i,el.length-1)]];e=P(o[2]);
+ for(k in e)st[k]=cl(st[k]+e[k]);
+ S={name:setup.name,y0:y0,origin:o,fl:{},hh:[pick(HUM)+" (your human)"],nw:[],land:pick(LANDS),st:st,gain:{h:0,j:0,b:0,w:0},round:0,used:[],mem:[],ev:null,res:null,over:false,order:FACTS.slice().sort(function(){return Math.random()-.5}),facts:[]};
+ next();
+}
+function next(){
+ S.round++;S.res=null;
+ if(S.round>ROUNDS||S.st.h<=0){S.over=true;S.round=Math.min(S.round-1,ROUNDS);S.nw=[];if(C.o.indexOf(S.origin[0])<0)S.nw.push("origin: "+S.origin[0]);if(C.c.indexOf(S.land[1])<0)S.nw.push("country: "+S.land[1]);var en=ending().t;if(C.e.indexOf(en)<0)S.nw.push("ending: "+en);rec(C.o,S.origin[0]);rec(C.c,S.land[1]);rec(C.e,en);C.n++;save();return render()}
+ if(S.round>16)S.st.h=cl(S.st.h-3);
+ S.facts.push(S.order[S.round-1]);S.wx=pick(seas()==="w"?WW:WC);if(MGR[S.round]){S.mg=MGR[S.round];S.ev=["g",MG[S.mg].t,[]];return render()}
+ var sg=stage(S.round),pool=[],i;
+ for(i=0;i<EV.length;i++)if(ok(i)&&S.used.indexOf(i)<0&&EV[i][0]===sg)pool.push(i);
+ if(!pool.length)for(i=0;i<EV.length;i++)if(ok(i)&&S.used.indexOf(i)<0&&EV[i][0]==="a")pool.push(i);
+ var fu=[];for(i=0;i<EV.length;i++)if(sg!=="p"&&(EV[i][0]==="e"||EV[i][3])&&S.used.indexOf(i)<0&&ok(i))fu.push(i);if(fu.length&&Math.random()<.5)pool=fu;
+ if(!pool.length){S.used=[];return next_again()}
+ var p=pick(pool);S.used.push(p);S.ev=EV[p];hh();render();
+}
+function next_again(){S.round--;S.facts.pop();next()}
+function choose(i){
+ var c=S.ev[2][i],e=P(c[1]),k;
+ for(k in e){S.st[k]=cl(S.st[k]+e[k]);if(e[k]>0)S.gain[k]+=e[k]}
+ if(c[3]){S.mem.push(c[3]);if(CONS[c[3]])S.fl[CONS[c[3]]]=1}
+ S.res=c[2];render();
+}
+function ending(){
+ var s=S.st,b="b",k;for(k in s)if(s[k]>s[b])b=k;
+ var t={h:"The Iron Pup",j:"The Joy Machine",b:"The Loyal Heart",w:"The Wise Old Dog"};
+ return {t:t[b],l:S.st.h<=0?"The adventures were big and the heart was bigger. Rest now, loved by all who knew you.":"A full, happy life, and a sound sleep at the end with your human close by."};
+}
+function render(){
+ var h;
+ if(!S){
+  h="<div style='text-align:center;margin-bottom:12px'><a href='https://www.donationalerts.com/r/ah_04' target='_blank' rel='noopener noreferrer' style='display:inline-block;border:3px double var(--ln);padding:8px 20px;color:var(--ink);text-decoration:none;font-weight:600'>Support the project</a><div class='mut' style='font-size:12px;margin-top:4px'>50% of this will go to charity: Рей (<a href='https://rayfund.ru/' target='_blank' rel='noopener noreferrer' style='color:inherit'>https://rayfund.ru/</a>)</div></div><header class='mast'><div class='top'><span>Special edition</span><span>Free with every wag</span><span>Vol. I</span>"+MU()+"</div><h1>The Daily Bark</h1><div class='sub'>A whole dog’s life, reported one half-year at a time</div></header>"+
+  "<div class='grid'><div class='col c1'><h3>Your collection</h3>"+COLH()+"<p class='mut'>About eight minutes of reading and choosing. Each edition covers six months of one dog’s life.</p></div>"+
+  "<div class='col c2'><h2>A puppy is about to be born</h2><p class='lead'>Where will the pup come from, and which country will it call home? The press will not say until the first edition. You only get to pick the name. Character comes from what happens, and from what you decide.</p><label class='mut'>Name your dog</label><input id='nm' maxlength='16' value='"+esc(setup.name)+"'><button class='p' id='go' style='margin-top:14px'>Print the first edition</button></div>"+
+  "<div class='col c3'><h3>Did you know?</h3><p class='fact'>Dogs have been living with people for over 14,000 years. Your dog’s story begins right now.</p></div></div>";
+  app.innerHTML=h;
+  document.getElementById("go").onclick=function(){setup.name=document.getElementById("nm").value.trim()||"Buddy";musicStart();start()};
+  return;
+ }
+ if(S.over){
+  var en=ending();
+  h=mast("Final edition: the life of "+esc(S.name))+"<div class='grid'><div class='col c1'>"+fig()+"<h3>Final vital signs</h3>"+bars()+"<h3>Temperament</h3><p>"+temper()+"</p></div>"+
+  "<div class='col c2'><h2>"+esc(S.name)+": "+en.t+"</h2><p class='mut'>"+S.land[0]+" "+esc(S.origin[0])+" from "+S.land[1]+". Lived "+age(S.round)+" years ("+S.y0+" to "+(S.y0+Math.round(S.round/2))+").</p><p class='lead'>"+en.l+"</p>"+(S.nw.length?"<p class='mut'>New in your collection: "+S.nw.join(", ")+"</p>":"")+"<h3>Life memories</h3>"+(S.mem.length?"<ul>"+S.mem.map(function(m){return "<li>"+esc(m)+"</li>"}).join("")+"</ul>":"<p class='mut'>A quiet life, and that is okay.</p>")+afterlife()+"<button id='sv'>Save the front page as a picture</button><button class='p' id='again'>Print a new life</button></div>"+
+  "<div class='col c3'><h3>Everything you learned</h3>"+factsHtml()+"</div></div>";
+  app.innerHTML=h;document.getElementById("again").onclick=function(){S=null;render()};document.getElementById("sv").onclick=saveFront;return;
+ }
+ h=mast("The life of "+esc(S.name)+" · "+sName(S.round))+"<div class='grid'><div class='col c1'>"+fig()+"<h3>Vital signs</h3>"+bars()+"<h3>Born</h3><p class='mut'><b>"+esc(S.origin[0])+"</b>, "+S.land[1]+", "+S.y0+". "+S.origin[1]+"</p><h3>Household</h3><ul>"+S.hh.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+"</ul><h3>Temperament</h3><p>"+temper()+"</p></div>"+
+  "<div class='col c2'><p class='mut' style='margin:0'>From our correspondent in "+S.land[1]+". Weather: "+S.wx.toLowerCase()+"</p><h2 class='hl'>"+sName(S.round)+", age "+age(S.round)+"</h2><p class='txt "+(S.res===null?"lead":"")+"'>"+S.ev[1]+"</p>"+(S.mg&&S.res===null?"<div id='mg'></div>":"");
+ if(S.res===null)S.ev[2].forEach(function(c,i){h+="<button class='ch' data-i='"+i+"'><b>"+"ABC".charAt(i)+".</b>"+c[0]+"</button>"});
+ else h+="<div class='res'>"+S.res+"</div><button class='p' id='nx'>Next edition</button>";
+ h+="</div><div class='col c3'><h3>Did you know?</h3>"+factsHtml()+"</div></div>";
+ app.innerHTML=h;
+ app.querySelectorAll("[data-i]").forEach(function(b){b.onclick=function(){choose(+b.dataset.i)}});
+ var nx=document.getElementById("nx");if(nx)nx.onclick=next;if(S.mg&&S.res===null)startMG();
+}
+app.addEventListener("click",function(e){var tg=e.target;if(tg.closest&&tg.closest("[data-i]"))sfx("b");if(tg.id==="nx"||tg.id==="again"||tg.id==="go")sfx("r");if(e.target.id!=="mu")return;M.on=!M.on;if(M.on){if(M.c)M.c.resume();else musicStart()}else if(M.c)M.c.suspend();e.target.textContent="♪ Music: "+(M.on?"on":"off");e.target.setAttribute("aria-pressed",M.on)});
+render();
+})();
+</script>
+</body>
+</html>
